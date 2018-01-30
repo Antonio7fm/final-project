@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+<<<<<<< HEAD
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do
@@ -9,3 +10,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
   end
 end
+=======
+end
+>>>>>>> 8345681817276c871f0a3317878e916e324b1460
