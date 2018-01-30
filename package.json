@@ -1,6 +1,5 @@
 {
   "name": "meetup",
-<<<<<<< HEAD
   "version": "1.0.0",
   "description": "clone of popular meetup website",
   "main": "index.js",
@@ -47,8 +46,6 @@
   "devDependencies": {
     "webpack": "^3.10.0"
   }
-=======
   "private": true,
   "dependencies": {}
->>>>>>> 8345681817276c871f0a3317878e916e324b1460
 }
