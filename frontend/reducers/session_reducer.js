@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
 
 import {
-  RECEIVE_CURRENT_USER,
+  SessionConstants
 } from '../actions/session_actions';
 
 const _nullUser = Object.freeze({
