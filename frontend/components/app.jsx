@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
+import SignupContainer from './session/signup_container';
 import {
   Route,
   Redirect,
@@ -9,10 +10,12 @@ import {
 } from 'react-router-dom';
 
 
-const App = () => (
+export default () => (
   <div>
-        <h1>Meetup</h1>
+    {/* <Route path="/" component={NavBarContainer}/>
+    <Route exact path="/" component={Home} /> */}
+    <Route path="/signup" component={SignupContainer} />
+    {/* <AuthRoute path="/login" component={LoginContainer} />
+    <ProtectedRoute path="/groups" component={ChirpIndexContainer} /> */}
   </div>
 );
-
-export default App;

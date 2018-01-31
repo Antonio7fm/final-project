@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
   window.login = APIUtil.login
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to Meetup (React is Working)</h1>, root);
+  ReactDOM.render(<Root store={store}/>, root);
 });
