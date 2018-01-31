@@ -8,5 +8,5 @@ document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
 
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to Meetup</h1>, root);
+  ReactDOM.render(<h1>Welcome to Meetup (React is Working)</h1>, root);
 });
