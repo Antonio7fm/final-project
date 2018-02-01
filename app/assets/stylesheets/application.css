@@ -12,5 +12,6 @@
  *
  *= require css_reset
  *= require nav_bar 
+ *= require signup  
  *= require_self
  */

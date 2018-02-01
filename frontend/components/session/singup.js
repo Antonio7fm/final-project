@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Signup extends React.Component {
   constructor(props) {
@@ -24,11 +25,25 @@ class Signup extends React.Component {
       .then( () => this.props.history.push('/groups'));
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
-      <div className="session-form">
-        <h2>Sign Up!</h2>
-        <form action="">
+      <div className="sessionForm vbox">
+        <h2>Sign up</h2>
+        <br />
+        {this.renderErrors()}
+        <form className="signupForm" action="">
           <label htmlFor="name">Your Name (this is public)</label>
           <input id="name" type="text" value={this.state.name} onChange={this.handleInput('name')}/>
 
@@ -38,8 +53,9 @@ class Signup extends React.Component {
           <label htmlFor="password">Password</label>
           <input id="password" type="password" value={this.state.password} onChange={this.handleInput('password')}/>          
           
-          <button onClick={this.handleSubmit}>Sign Up</button>
+          <button onClick={this.handleSubmit}>Continue</button>
         </form>
+        <section>Already a member? <Link to="/login">Log in.</Link></section>
       </div>
     )
   }
