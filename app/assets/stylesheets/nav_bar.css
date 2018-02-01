@@ -2,31 +2,37 @@
     justify-content: space-between;
     align-items: center;
     height: 69px;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
     background-color: #fff;
-    border-bottom: 1px solid rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    border-top: 2px solid transparent;
     font-size: 14px;
+    line-height: 23px;
+    font-family: "Graphik Meetup", helvetica, arial, sans-serif;
+    font-weight: 400;
 }
 
 .logo-link {
-    height: 100%;
-    width: 150px;
+    width: 155px;
+    border-top: 4px solid transparent;
 }
 
 #meetup-logo {
-    width: 123px; 
-    height: 44px; 
+    margin: auto;
+    align-self: auto;
+    width: 123px;
+    height: 44px;
 }
 
-.auth-corner{
+.auth-corner {
     display: flex;
     justify-content: space-between;
-    width: 125px;
-    padding: 32px;    
+    width: 108px;
+    padding: 32px;
 }
 
 .auth-links {
-    height: 23px;    
+    height: 23px;
 }
 
 .auth-links :hover {
@@ -34,39 +40,6 @@
 }
 
 
+/* body {
 
-
-
-
-
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-    display: block;
-}
-
-#globalNav {
-    padding: 4px 0 0;
-    position: relative;
-    margin: 0;
-}
-
-#globalNav.header--new.unauthenticated {
-    padding: 16px 16px 8px;
-}
-
-body {
-    color: rgba(0,0,0,.87);
-    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-
-#globalNav.header--new.unauthenticated .headerTab-label {
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.header--new .headerTab-label {
-    color: rgba(0,0,0,.54);
-    border-bottom: 3px solid transparent;
-    max-width: 18vw;
-}
+} */
