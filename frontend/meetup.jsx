@@ -6,8 +6,17 @@ import * as APIUtil from './util/session_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  let store = configureStore();
-  window.login = APIUtil.login
+  let initialState = undefined;
+  if (window.currentUser) {
+    initialState = {
+      session: {
+        currentUser: window.currentUser
+      } 
+    };
+  }
+  
+  const store = configureStore(initialState);
+
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });

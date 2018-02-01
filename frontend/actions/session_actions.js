@@ -12,24 +12,32 @@ export const strConst = {
     RECEIVE_ERRORS: "RECEIVE_ERRORS"
 };
 
-export const createNewUser = formUser => dispatch => postUser(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
+//this will be used inside of the singup container which will pass it into the form for use of the ajax call
+export const createNewUser = formUser => dispatch => postUser(formUser).then(user => dispatch(receiveCurrentUser(user)));
 
+
+//this will be used inside of the reducer after called in the above createNewUser
 export const receiveCurrentUser = user => ({
     type: strConst.RECEIVE_CURRENT_USER,
     user
 });
+
+
+export const logout = () => dispatch => deleteSession().then(() => dispatch(logoutCurrentUser()));
+
+
+export const login = formUser => dispatch => postSession(formUser).then(user => dispatch(receiveCurrentUser(user)));
+
+
+
 
 export const logoutCurrentUser = () => ({
     type: strConst.LOGOUT_CURRENT_USER
 });
 
 
-export const login = formUser => dispatch => postSession(formUser)
-    .then(user => dispatch(receiveCurrentUser(user)));
 
-export const logout = () => dispatch => deleteSession()
-    .then(() => dispatch(logoutCurrentUser()));
+
 
 
 export const receiveErrors = errors => ({
