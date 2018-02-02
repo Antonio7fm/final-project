@@ -32,6 +32,6 @@
     height: 23px;
 }
 
-.auth-corner a:hover {
+.auth-corner a:hover, button:hover {
     color: #F64060;
 }

@@ -9,11 +9,13 @@ export const strConst = {
     LOGOUT_CURRENT_USER: "LOGOUT_CURRENT_USER",
     SIGNUP: "SIGNUP",
     RECEIVE_CURRENT_USER: "RECEIVE_CURRENT_USER",
-    RECEIVE_ERRORS: "RECEIVE_ERRORS"
+    RECEIVE_ERRORS: "RECEIVE_ERRORS",
+    CLEAR_ERRORS: "CLEAR_ERRORS",
 };
 
 export const login = formUser => dispatch => 
-    postSession(formUser).then(user => dispatch(receiveCurrentUser(user)));
+    postSession(formUser).then(user => dispatch(receiveCurrentUser(user)),
+    errors => dispatch(receiveErrors(errors.responseJSON)));
 
 
 export const logout = () => dispatch => 
@@ -25,7 +27,8 @@ export const logoutCurrentUser = () => ({
 
 //this will be used inside of the singup container which will pass it into the form for use of the ajax call
 export const createNewUser = formUser => dispatch => 
-    postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors));
+    postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), 
+    errors => dispatch(receiveErrors(errors.responseJSON)));
 
 
 //this will be used inside of the reducer after called in the above createNewUser
@@ -38,3 +41,7 @@ export const receiveErrors = errors => ({
     type: strConst.RECEIVE_ERRORS,
     errors
 });
+
+export const clearErrors = () => ({
+    type: strConst.CLEAR_ERRORS,
+})

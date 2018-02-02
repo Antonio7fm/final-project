@@ -4,15 +4,15 @@ import MeetupLogo from '../../../app/assets/images/meetupLogo.svg'
 
 export default ({ currentUser, logout }) => {
 const display = currentUser ? (
-    <div>
-      <h3>Welcome {currentUser.name}!</h3>
-      <button onClick={logout}>Logout</button>
+    <div className="auth-corner">
+      <Link to="/login" onClick={logout}>Logout</Link>
+      {/* <button onClick={logout}>Logout</button> */}
     </div>
   ) : (
     <div>
       <div className="auth-corner">
-        <Link className="auth-links" to="/login">Log in</Link>
-        <Link className="auth-links" to="/signup">Sign up</Link>
+        <Link to="/login">Log in</Link>
+        <Link to="/signup">Sign up</Link>
       </div>
     </div>
   );

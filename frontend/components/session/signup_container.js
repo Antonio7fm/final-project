@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewUser } from '../../actions/session_actions';
+import { createNewUser, clearErrors } from '../../actions/session_actions';
 import Signup from './singup';
 
 const mapDispatchToProps = dispatch => ({
@@ -7,6 +7,7 @@ const mapDispatchToProps = dispatch => ({
     // 'createNewUser' is avaiable to them. 
     // 'createNewUser' is coming from session actions and where actions result in ajax calls
     createNewUser: formUser => dispatch(createNewUser(formUser)),
+    clearErrors: () => dispatch(clearErrors()),
 });
 
 const mapStateToProps = (state) => {
