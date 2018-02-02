@@ -45,7 +45,8 @@
     "redux-thunk": "^2.2.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.1",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "react-svg-loader": "^2.1.0"    
   },
   "devDependencies": {
     "react-svg-loader": "^2.1.0",
