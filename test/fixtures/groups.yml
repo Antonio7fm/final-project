@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  city: MyString
+  country: MyString
+  localized_country_name: MyString
+  localized_location: MyString
+  state: MyString
+  lat: 1.5
+  lon: 1.5
+  highres_link: MyString
+  photo_link: MyString
+  thumb_link: MyString
+
+two:
+  name: MyString
+  description: MyText
+  city: MyString
+  country: MyString
+  localized_country_name: MyString
+  localized_location: MyString
+  state: MyString
+  lat: 1.5
+  lon: 1.5
+  highres_link: MyString
+  photo_link: MyString
+  thumb_link: MyString

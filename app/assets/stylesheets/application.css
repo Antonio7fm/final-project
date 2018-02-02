@@ -11,7 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require css_reset
- *= require nav_bar 
+ *= require nav_bar
+ *= require groups.css 
  *= require signup  
  *= require_self
  */
