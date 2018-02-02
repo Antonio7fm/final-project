@@ -9,7 +9,7 @@
   "private": true,
   "engines": {
     "node": "6.10.1",
-    "npm": "5.6.10"
+    "npm": "5.6.0"
   },
   "scripts": {
     "build": "webpack",
