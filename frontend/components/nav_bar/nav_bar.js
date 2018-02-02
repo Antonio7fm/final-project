@@ -22,12 +22,6 @@ const display = currentUser ? (
       <div>
         <Link className="logo-link hbox" to="/"><MeetupLogo id="meetup-logo"/></Link>
       </div>
-
- 
-        <iframe src="../../../app/assets/images/meetupLogo.svg">
-          Your browser does not support iframes
-        </iframe>
-
       <div>
         {display}
       </div>
