@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchGroups } from '../../actions/session_actions';
-import Group from './group';
+import Groups from './groups';
 
 const mapDispatchToProps = dispatch => ({
     // this will be called inside the group.js form and is making sure that the dispach action 
@@ -9,4 +9,4 @@ const mapDispatchToProps = dispatch => ({
     fetchGroups: formUser => dispatch(fetchGroups(searchCriteria))
 });
 
-export default connect(null, mapDispatchToProps)(Group);
+export default connect(null, mapDispatchToProps)(Groups);

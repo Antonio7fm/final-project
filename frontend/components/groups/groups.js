@@ -1,6 +1,12 @@
 import React from 'react';
 
-class Group extends React.Component {
+class Groups extends React.Component {
+
+  componentWillUnmount() {
+    this.props.fetchGroups();
+  }
+
+
   render() {
     return (
       <div className="main-page">
@@ -11,10 +17,10 @@ class Group extends React.Component {
         <div className="body vbox">
           <div className="search-bar hbox">
             <form action="" className="hbox">
-              <input id="mainKeywords" class="dropdown-toggle ellipsize " 
-              type="text" name="keywords" size="30" maxlength="100" value="" 
-              title="All Meetups" placeholder="All Meetups" autocomplete="off" 
-              autocorrect="on" spellcheck="true" data-key="*" data-name="*" />
+              <input id="mainKeywords" className="dropdown-toggle ellipsize " 
+              type="text" name="keywords" size="30" maxLength="100" value="" 
+              title="All Meetups" placeholder="All Meetups" autoComplete="off" 
+              autoCorrect="on" spellCheck="true" data-key="*" data-name="*" />
               <div className="search-criteria">within  <a href="">50 miles</a>  of  <a href="">Walnut Creek</a></div>
             </form>
             <div className="group-calendar hbox">
@@ -49,4 +55,4 @@ class Group extends React.Component {
   }
 }
 
-export default Group;
+export default Groups;
