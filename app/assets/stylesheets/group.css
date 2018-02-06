@@ -1,0 +1,58 @@
+.groupHeader {
+    margin: auto;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 57px;
+    width: 100%;
+    box-shadow:rgba(46, 62, 72, 0.12) 0px 0px 2px 0px, rgba(46, 62, 72, 0.12) 0px 2px 4px 0px        
+}
+
+.groupHeader img {
+    border-radius: 8px;
+    width: 600px;
+    height: 337px;
+    background: gray;
+}
+
+.groupHeader h1 {
+    color:rgb(46, 62, 72);
+    font-size:32px;
+    font-weight:600;
+    line-height:35.2px;
+}
+
+.groupHeader ul {
+    width: 414px;
+    padding-left: 44px;
+}
+
+.groupHeader ul > li {
+    padding-top: 10px;
+    margin-bottom: -15px;            
+    font-size:12px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color:rgba(46, 62, 72, 0.35);
+}
+
+.groupHeader h3 {
+    color:rgb(46, 62, 72);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 23.2px;
+}
+
+.groupHeader button {
+    color: #fff;
+    background: #f13a59;
+    border-radius: 4px;
+    font-size:14px;
+    font-weight:400;
+    width: 158px;
+    height: 38px;
+    text-align: center;
+}
+
+.groupHeader span {
+    /* box-shadow:rgba(46, 62, 72, 0.12) 0px 0px 2px 0px, rgba(46, 62, 72, 0.12) 0px 2px 4px 0px     */
+}

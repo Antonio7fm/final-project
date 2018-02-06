@@ -1,9 +1,15 @@
-import { receiveCurrentUser, receiveErrors } from '../actions/session_actions';
+import { receiveGroup, receiveErrors } from '../actions/group_actions';
 
-export const fetchGroups = groups => (
+export const fetchGroups = () => (
     $.ajax({
         method: 'GET',
         url: '/api/groups',
-        data: { groups }
+    })
+);
+
+export const fetchGroup = id => (
+    $.ajax({
+        method: 'GET',
+        url: `/api/groups/${id}`,
     })
 );

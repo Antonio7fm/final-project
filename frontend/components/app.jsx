@@ -10,18 +10,19 @@ import {
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container';
 import LoginContainer from './session/login_container';
-import Groups from './groups/groups_container';
+import Groups from './groups/groups';
 import GroupShowContainer from './group_show/group_show_container';
 import { AuthRoute, ProtectedRoute } from  '../util/route_util';
 
 
 export default () => (
   <div>
-    <Route path="/" component={NavBarContainer}/>
     {/* <Route exact path="/" component={Home} /> */}
+    <Route path="/" component={NavBarContainer}/>
     <AuthRoute path="/signup" component={SignupContainer} />
-    <ProtectedRoute path="/groups" component={Groups} />
     <AuthRoute path="/login" component={LoginContainer} />
-    <Route path="/groups/:groupId" component={GroupShowContainer} />
+    <ProtectedRoute exact path="/groups" component={Groups} />
+    <Route exact path="/groups/:id" component={GroupShowContainer} />  
+
   </div>
 );

@@ -1,18 +1,25 @@
 export const RECEIVE_GROUPS = 'RECEIVE_GROUPS';
-export const RECEIVE_SINGLE_GROUP = 'RECEIVE_SINGLE_GROUP';
-import { getGroups, } from '../util/group_util';
+export const RECEIVE_GROUP = 'RECEIVE_GROUP';
+import * as GroupUtil from '../util/group_util';
 
 const receiveGroups = groups => ({
   type: RECEIVE_GROUPS,
   groups
 });
 
-const receiveSingleGroup = group => ({
-  type: RECEIVE_SINGLE_GROUP,
+const receiveGroup = group => ({
+  type: RECEIVE_GROUP,
   group
 });
 
-export const fetchGroups = () => dispatch => {
-  return getGroups()
-    .then(groups => dispatch(receiveGroups(groups)));
-}
+export const fetchGroups = () => dispatch => (
+  GroupUtil.fetchGroups().then(groups => (
+    dispatch(receiveGroups(groups))
+  ))
+);
+
+export const fetchGroup = id => dispatch => (
+  GroupUtil.fetchGroup(id).then(group => (
+    dispatch(receiveGroup(group))
+  ))
+);

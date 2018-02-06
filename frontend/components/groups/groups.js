@@ -1,13 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import GroupPhotos from './group_photos_container';
 
 class Groups extends React.Component {
 
-  componentWillUnmount() {
-    this.props.fetchGroups();
-  }
-
-
   render() {
+
     return (
       <div className="main-page">
         <div className="login-banner">
@@ -31,6 +29,7 @@ class Groups extends React.Component {
           <div className="sort">
             Sort by <a href="#">Recommended</a>
           </div>
+          <GroupPhotos />
           <ul className="container">
             <li>Group 1</li>
             <li>Group 2</li>

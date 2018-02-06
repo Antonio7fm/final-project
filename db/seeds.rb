@@ -619,14 +619,11 @@ groups = [{
       }
   },
   "who": "Aspiring Product Managers",
-  "group_photo": {
-      "id": 442032728,
       "highres_link": "https://secure.meetupstatic.com/photos/event/3/1/b/8/highres_442032728.jpeg",
       "photo_link": "https://secure.meetupstatic.com/photos/event/3/1/b/8/600_442032728.jpeg",
       "thumb_link": "https://secure.meetupstatic.com/photos/event/3/1/b/8/thumb_442032728.jpeg",
       "type": "event",
       "base_url": "https://secure.meetupstatic.com",
-  },
   "timezone": "US/Pacific",
   "next_event": {
       "id": "246744024",
