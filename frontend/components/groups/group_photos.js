@@ -18,8 +18,7 @@ renderGroupLinks() {
             <Link to={`/groups/${group.id}`}>
                 <img src={group.photo_link} alt={group.name} />
             </Link>
-            {console.log("this is working!")}
-            Hello there!!!        
+            {console.log("this is working!")} 
         </li>
       ) 
     )
@@ -30,7 +29,6 @@ renderGroupLinks() {
 render() {
   return(
     <ul className="container">
-      <li>Test</li>
       {this.renderGroupLinks()}
     </ul>
   )
