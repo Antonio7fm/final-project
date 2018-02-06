@@ -16,9 +16,9 @@ renderGroupLinks() {
       this.props.groups.map( group => 
         <li key={group.id}>
             <Link to={`/groups/${group.id}`}>
+                <span>{group.name}</span>
                 <img src={group.photo_link} alt={group.name} />
-            </Link>
-            {console.log("this is working!")} 
+            </Link> 
         </li>
       ) 
     )

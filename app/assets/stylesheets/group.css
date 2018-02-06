@@ -7,16 +7,20 @@
     box-shadow:rgba(46, 62, 72, 0.12) 0px 0px 2px 0px, rgba(46, 62, 72, 0.12) 0px 2px 4px 0px        
 }
 
-.groupHeader img {
-    border-radius: 8px;
+.groupHeader > div {
     width: 600px;
     height: 337px;
-    background: gray;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.groupHeader img {
+    width: 100%;
 }
 
 .groupHeader h1 {
     color:rgb(46, 62, 72);
-    font-size:32px;
+    font-size: 1.5vw;
     font-weight:600;
     line-height:35.2px;
 }
@@ -53,6 +57,21 @@
     text-align: center;
 }
 
-.groupHeader span {
-    /* box-shadow:rgba(46, 62, 72, 0.12) 0px 0px 2px 0px, rgba(46, 62, 72, 0.12) 0px 2px 4px 0px     */
+.groupBody {
+    justify-content: space-between;
+    width: 1060px;
+    color:rgb(46, 62, 72);
+    margin: auto;
+}
+
+.about {
+    width: 66%;
+    border: 3px solid red;
+}
+
+
+.groupBody h2 {
+    font-size: 20px;
+    font-weight:500;
+    border: 3px solid red;    
 }

@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 gem 'jquery-rails'
+gem 'rails-html-sanitizer'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -22,7 +22,7 @@ export default () => (
     <AuthRoute path="/signup" component={SignupContainer} />
     <AuthRoute path="/login" component={LoginContainer} />
     <ProtectedRoute exact path="/groups" component={Groups} />
-    <Route exact path="/groups/:id" component={GroupShowContainer} />  
-
+    <Route exact path="/groups/:id" component={GroupShowContainer} />
+    {/* <Route path="/" component={FooterContainer}/>           */}
   </div>
 );

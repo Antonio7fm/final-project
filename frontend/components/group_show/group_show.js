@@ -8,34 +8,47 @@ componentDidMount() {
   this.props.fetchGroup(this.props.match.params.id);
 }
 
-  render() {
-    if (this.props.group){
-      const group = this.props.group
-      return (
-        <div className="vbox">
-          <div className="groupHeader hbox">
-            <img className="groupImage" src="" alt=""/>
-            <ul className="vbox">
-              <h1>{group.name}</h1>
-              <li>Location</li>
-              <h3>City Name</h3>
-              <li>Member</li>   
-              <h3>Member Count</h3>                     
-              <li>Organize</li>
-              <h3>Organizer Name</h3>
-              <button className="join">Join Us</button>
-            </ul>
+renderGroupPage() {
+  if (this.props.group) {
+  const group = this.props.group;      
+    return (
+      <div className="vbox">
+        <div className="groupHeader hbox">
+          <div>
+            <img className="groupImage" src={group.highres_link} alt=""/>            
           </div>
-          <span>Next Meetup</span>
-          <div className="hbox">
+          <ul className="vbox">
+            <h1>{group.name}</h1>
+            <li>Location</li>
+            <h3>{group.localized_location}</h3>
+            <li>Members</li>   
+            <h3>Member Count</h3>                     
+            <li>Organize</li>
+            <h3>Organizer Name</h3>
+            <button className="join">Join Us</button>
+          </ul>
+        </div>
+        <div className="groupBody hbox">
+          <div className="about">
+            <h2>What we're about</h2>
+            {group.description}
+            <h2>Members</h2>
+          </div>
+          <div className="events">
+            <h2>Upcoming Meetups</h2>
           </div>
         </div>
-      )
-    } else {
-      return (
-        <div></div>
-      )
-    }
+      </div>
+    )
+  }
+}
+
+  render() {
+    return(
+      <div>
+        {this.renderGroupPage()}
+      </div>
+    )
   }
 }
 
