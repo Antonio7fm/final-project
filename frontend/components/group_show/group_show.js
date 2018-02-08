@@ -28,14 +28,27 @@ renderGroupPage() {
             <button className="join">Join Us</button>
           </ul>
         </div>
-        <div className="groupBody hbox">
-          <div className="about">
-            <h2>What we're about</h2>
-            {group.description}
-            <h2>Members</h2>
-          </div>
-          <div className="events">
-            <h2>Upcoming Meetups</h2>
+        <div className="bodyWrapper hbox">        
+          <div className="groupBody hbox">
+            <div className="about">
+              <h2>What we're about</h2>
+              {group.description}
+              <h2>Members</h2>
+            </div>
+            <div className="events">
+              <h2>Upcoming Meetups</h2>
+              <ul>
+                <li>
+                  Group Events Here
+                </li>
+                <li>
+                  Group Events Here
+                </li>
+                <li>
+                  Group Events Here
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

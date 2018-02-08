@@ -1,4 +1,8 @@
+
+
+
 .groupHeader {
+    z-index: 10;
     margin: auto;
     justify-content: center;
     padding-top: 24px;
@@ -57,21 +61,50 @@
     text-align: center;
 }
 
+.bodyWrapper {
+    justify-content: center;
+    background: #f6f7f8;
+}
+
 .groupBody {
-    justify-content: space-between;
-    width: 1060px;
     color:rgb(46, 62, 72);
-    margin: auto;
+    justify-content: space-between;
+    width: 1055px;
+}
+
+.groupBody h2 {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight:500;
 }
 
 .about {
-    width: 66%;
-    border: 3px solid red;
+    width: 600px;
 }
 
+.events {
+    width: 320px;
+}
 
-.groupBody h2 {
-    font-size: 20px;
-    font-weight:500;
-    border: 3px solid red;    
+.events ul > li {
+    text-align: center;
+    width: 315px;
+    height: 210px;
+    font-size:16px;
+    font-weight:400;
+    background: #fff;
+    border-radius: 8px;
+    margin: 16px 0px 16px 0px;
+    padding: 8px;
+}
+
+.events ul > li:hover {
+    /* box-shadow: .25s cubic-bezier(.4,0,.2,1); */
+    transition: box-shadow .25s cubic-bezier(.4,0,.2,1),transform .25s cubic-bezier(.4,0,.2,1);
+    transition-property: box-shadow, transform;
+    transition-duration: 0.25s, 0.25s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: initial, initial;
+    border: .5px solid rgba(46,62,72,.12);
 }
