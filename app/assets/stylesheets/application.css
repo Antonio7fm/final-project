@@ -12,8 +12,9 @@
  *
  *= require css_reset
  *= require nav_bar
- *= require groups.css 
+ *= require home_page
+ *= require groups 
  *= require signup  
- *= require group.css  
+ *= require group
  *= require_self
  */

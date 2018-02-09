@@ -8,3 +8,5 @@ end
 json.members do 
     json.array! @group.members, :id, :name
 end
+
+json.canJoin !current_user.groups.include?(@group.id)

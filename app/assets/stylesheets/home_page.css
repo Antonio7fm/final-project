@@ -1,0 +1,50 @@
+.video-banner {
+    position: relative;
+    height: 54vh;
+    max-height: 465px;
+    overflow: hidden;
+    color: #fff;
+    border-top: 1px solid rgba(0,0,0,.12);    
+}
+
+.video {
+width: 100%;
+position: absolute;
+top: -9999px;
+bottom: -9999px;
+left: -9999px;
+right: -9999px;
+margin: auto;
+}
+
+.welcome-banner {
+    padding-top: 150px;
+    align-self: center;
+    position: relative;
+    text-align: center;
+    font-weight: 600;
+    font-size: 56px;
+    stroke: transparent;
+    fill: #fff;
+
+}
+
+.welcome-banner h2 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size:20px;
+}
+
+.welcome-banner a {
+    width: 200px;
+    border-radius: 3px;
+    background: #ed1c40;
+    padding: .75em 6em;
+    font-weight:600;
+    letter-spacing:-0.32px;
+    font-size: 20px;
+}
+
+.welcome-banner a:hover {
+    background: #d01031;
+}

@@ -1,40 +1,52 @@
-
-
-
 .groupHeader {
     z-index: 10;
     margin: auto;
     justify-content: center;
-    padding-top: 24px;
+    padding-top: 25px;
     padding-bottom: 57px;
     width: 100%;
     box-shadow:rgba(46, 62, 72, 0.12) 0px 0px 2px 0px, rgba(46, 62, 72, 0.12) 0px 2px 4px 0px        
 }
 
-.groupHeader > div {
+.bio-container {
+    max-width: 1055px;
+}
+
+.bio-container > div {
+    position: relative;
     width: 600px;
-    height: 337px;
+    height: 100%;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.groupHeader img {
+.groupImage {
     width: 100%;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
 }
 
-.groupHeader h1 {
+.info h1 {
     color:rgb(46, 62, 72);
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     font-weight:600;
     line-height:35.2px;
 }
 
-.groupHeader ul {
-    width: 414px;
+.info {
     padding-left: 44px;
+    width: 420px!important;
 }
 
-.groupHeader ul > li {
+.info ul {
+    min-height: 300px;
+}
+
+.info ul > li {
     padding-top: 10px;
     margin-bottom: -15px;            
     font-size:12px;
@@ -43,14 +55,15 @@
     color:rgba(46, 62, 72, 0.35);
 }
 
-.groupHeader h3 {
+.info h3 {
     color:rgb(46, 62, 72);
     font-size: 16px;
     font-weight: 500;
     line-height: 23.2px;
 }
 
-.groupHeader button {
+
+.info button {
     color: #fff;
     background: #f13a59;
     border-radius: 4px;
@@ -59,6 +72,11 @@
     width: 158px;
     height: 38px;
     text-align: center;
+    padding: 2px 0;
+}
+
+.info button:hover {
+    background: #f13a59;
 }
 
 .bodyWrapper {
@@ -88,6 +106,9 @@
 }
 
 .events ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     width: 315px;
     height: 210px;
@@ -96,7 +117,6 @@
     background: #fff;
     border-radius: 8px;
     margin: 16px 0px 16px 0px;
-    padding: 8px;
 }
 
 .events ul > li:hover {
@@ -107,4 +127,33 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: initial, initial;
     border: .5px solid rgba(46,62,72,.12);
+}
+
+
+
+.events ul > li > button {
+    /* background: rgb(0, 162, 199); */
+    margin: auto;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;    
+    width: 270px;
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 1.6;
+    outline: 0;
+    vertical-align: middle;
+    color: #fff;
+    background: #00a2c7;
+}
+
+.events ul > li > button:hover {
+        background: #008dae;
+        transition: all .4s cubic-bezier(.165,.84,.44,1);
+        transition-property: all;
+        transition-duration: 0.4s;
+        transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: initial;
+        color:rgb(255, 255, 255);
 }

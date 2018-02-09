@@ -10,6 +10,7 @@
     line-height: 23px;
     font-family: "Graphik Meetup", helvetica, arial, sans-serif;
     font-weight: 400;
+    z-index: 5;
 }
 
 .logo-link {
@@ -34,4 +35,29 @@
 
 .auth-corner a:hover, button:hover {
     color: #F64060;
+}
+
+.content {
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+  }
+  
+  .footer {
+    flex-shrink: 0;
+    margin-top: 20px;
+    padding: 20px 0 20px 0;    
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 400;
+    color: #fff;
+    background-color: #2f363f;
+    align-self: center;
+    justify-content: center;
+  }
+
+footer > a {
+    margin: 0px 150px 0px 150px;
 }

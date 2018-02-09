@@ -23,3 +23,15 @@ export const fetchGroup = id => dispatch => (
     dispatch(receiveGroup(group))
   ))
 );
+
+export const joinGroup = membership => dispatch => (
+  GroupUtil.joinGroup(membership).then(group => (
+    dispatch(receiveGroup(group))
+  ))
+);
+
+export const leaveGroup = membership => dispatch => (
+  GroupUtil.leaveGroup(membership).then(group => (
+    dispatch(receiveGroup(group))
+  ))
+);

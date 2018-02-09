@@ -3,43 +3,67 @@ import { Link } from 'react-router-dom';
 
 
 class GroupShow extends React.Component {
-
+constructor(props){
+super(props);
+this.handleJoin = this.handleJoin.bind(this)
+this.handleLeave = this.handleLeave.bind(this)
+}
+  
 componentDidMount() {
   this.props.fetchGroup(this.props.match.params.id);
 }
 
+handleJoin(){
+  this.props.joinGroup({user_id:this.props.currentUser.id, group_id:this.props.group.id});  
+}
+
+handleLeave(){
+  this.props.leaveGroup({user_id:this.props.currentUser.id, group_id:this.props.group.id});  
+}
+
 renderGroupPage() {
   if (this.props.group) {
+        
+    const membershipButton = this.props.canJoin ? 
+    (<button className="join" onClick={this.handleJoin}>Join Us</button>)
+    :
+    (<button className="join" onClick={this.handleLeave}>Leave Group</button>);
+
   const group = this.props.group;      
     return (
       <div className="vbox">
         <div className="groupHeader hbox">
-          <div>
+        <div className="bio-container hbox">
+          <div className="div-of-trouble">
             <img className="groupImage" src={group.highres_link} alt=""/>            
           </div>
-          <ul className="vbox">
-            <h1>{group.name}</h1>
-            <li>Location</li>
-            <h3>{group.localized_location}</h3>
-            <li>Members</li>   
-            <h3>Member Count</h3>                     
-            <li>Organize</li>
-            <h3>Organizer Name</h3>
-            <button className="join">Join Us</button>
-          </ul>
+          <div className="info vbox">
+             <ul>
+              <h1>{group.name}</h1>
+              <li>Location</li>
+              <h3>{group.localized_location}</h3>
+              <li>Members</li>   
+              <h3>Member Count</h3>                     
+              <li>Organize</li>
+              <h3>Organizer Name</h3>
+            </ul>
+            {membershipButton}
+          </div>
+          </div>
         </div>
         <div className="bodyWrapper hbox">        
           <div className="groupBody hbox">
             <div className="about">
               <h2>What we're about</h2>
-              {group.description}
+              <p>{group.description}</p>
               <h2>Members</h2>
             </div>
             <div className="events">
               <h2>Upcoming Meetups</h2>
               <ul>
                 <li>
-                  Group Events Here
+                  <span>Group Events Here</span>
+                  <button id="attend-button">Attend</button>
                 </li>
                 <li>
                   Group Events Here

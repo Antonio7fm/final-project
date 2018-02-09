@@ -23,12 +23,6 @@ ul {
   list-style: none;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 input[type="password"],
 input[type="email"],
 input[type="text"],
@@ -46,6 +40,12 @@ button {
 button,
 input[type="submit"] {
   cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .vbox {

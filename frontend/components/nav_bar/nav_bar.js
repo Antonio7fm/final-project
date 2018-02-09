@@ -6,7 +6,6 @@ export default ({ currentUser, logout }) => {
 const display = currentUser ? (
     <div className="auth-corner">
       <Link to="/login" onClick={logout}>Logout</Link>
-      {/* <button onClick={logout}>Logout</button> */}
     </div>
   ) : (
     <div>
