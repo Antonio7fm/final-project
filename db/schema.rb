@@ -10,17 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180207193117) do
+ActiveRecord::Schema.define(version: 20180209094742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "group_members", force: :cascade do |t|
-    t.integer "group_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -58,6 +51,12 @@ ActiveRecord::Schema.define(version: 20180207193117) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", null: false
+    t.string "country"
+    t.string "city"
+    t.string "state"
+    t.string "highres_link"
+    t.string "photo_link"
+    t.string "thumb_link"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end

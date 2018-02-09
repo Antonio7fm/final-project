@@ -18,16 +18,16 @@ handleJoin(){
 }
 
 handleLeave(){
-  this.props.leaveGroup({user_id:this.props.currentUser.id, group_id:this.props.group.id});  
+  this.props.leaveGroup({id:this.props.membership, group_id:this.props.group.id});  
 }
 
 renderGroupPage() {
   if (this.props.group) {
-        
-    const membershipButton = this.props.canJoin ? 
-    (<button className="join" onClick={this.handleJoin}>Join Us</button>)
+
+    const membershipButton = Number.isInteger(this.props.membership) ? 
+    (<button className="join" onClick={this.handleLeave}>Leave Group</button>)
     :
-    (<button className="join" onClick={this.handleLeave}>Leave Group</button>);
+    (<button className="join" onClick={this.handleJoin}>Join Us</button>);
 
   const group = this.props.group;      
     return (
@@ -43,7 +43,7 @@ renderGroupPage() {
               <li>Location</li>
               <h3>{group.localized_location}</h3>
               <li>Members</li>   
-              <h3>Member Count</h3>                     
+              <h3>{this.props.memberships.length}</h3>                     
               <li>Organize</li>
               <h3>Organizer Name</h3>
             </ul>

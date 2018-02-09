@@ -12,15 +12,14 @@ def create
 end
 
 def destroy
+    Membership.find(membership_params[:id]).destroy
     @group = Group.find(membership_params[:group_id])
-    @membership = Membership.where(user_id: current_user.id, group_id: @group.id)
-    @membership.destroy
     render "api/groups/show"
 end
 
 private
 def membership_params
-    params.require(:membership).permit(:user_id, :group_id)
+    params.require(:membership).permit(:user_id, :group_id, :id)
 end
 
 end

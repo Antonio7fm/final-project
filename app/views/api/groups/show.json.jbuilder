@@ -9,4 +9,6 @@ json.members do
     json.array! @group.members, :id, :name
 end
 
-json.canJoin !current_user.groups.include?(@group.id)
+membership = Membership.where(user_id: current_user.id, group_id: @group.id)
+
+json.membership !membership[0] ? false : membership[0].id
