@@ -24,7 +24,7 @@ handleLeave(){
 renderGroupPage() {
   if (this.props.group) {
 
-    const membershipButton = Number.isInteger(this.props.membership) ? 
+    const membershipButton = this.props.membership ? 
     (<button className="join" onClick={this.handleLeave}>Leave Group</button>)
     :
     (<button className="join" onClick={this.handleJoin}>Join Us</button>);
