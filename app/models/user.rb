@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
 	through: :memberships,
 	source: :group
 
+	has_many :organized_groups, 
+	foreign_key: :organizer_id, 
+	class_name: :Group
+
     attr_reader :password
 
 	after_initialize :ensure_session_token

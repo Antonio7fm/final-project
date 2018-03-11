@@ -12,3 +12,5 @@ end
 membership = Membership.where(user_id: current_user.id, group_id: @group.id)
 
 json.membership !membership[0] ? false : membership[0].id
+
+json.organizer @group.organizer

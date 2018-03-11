@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { log } from 'util';
 
 
 class GroupShow extends React.Component {
 constructor(props){
+  
 super(props);
+load_complete = false
 this.handleJoin = this.handleJoin.bind(this)
 this.handleLeave = this.handleLeave.bind(this)
 }
   
 componentDidMount() {
   this.props.fetchGroup(this.props.match.params.id);
+  this.load_complete = true
 }
 
 handleJoin(){
@@ -22,7 +26,7 @@ handleLeave(){
 }
 
 renderGroupPage() {
-  if (this.props.group) {
+  if (this.props.memberships) {
 
     const membershipButton = this.props.membership ? 
     (<button className="join" onClick={this.handleLeave}>Leave Group</button>)
@@ -43,9 +47,9 @@ renderGroupPage() {
               <li>Location</li>
               <h3>{group.localized_location}</h3>
               <li>Members</li>   
-              <h3>{this.props.memberships.length}</h3>                     
-              <li>Organize</li>
-              <h3>Organizer Name</h3>
+              <h3>{this.props.memberships.length}</h3>
+              <li>Organizer</li>
+              <h3>{this.props.organizer.name}</h3>
             </ul>
             {membershipButton}
           </div>
@@ -85,7 +89,7 @@ renderGroupPage() {
       <div>
         {this.renderGroupPage()}
       </div>
-    )
+    ) 
   }
 }
 
