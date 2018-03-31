@@ -26,6 +26,6 @@ class Api::GroupsController < ApplicationController
     params.require(:group).permit(
       :name, :description, :city, :country, 
       :localized_country_name, :localized_location, :state, 
-      :lat, :lon, :highres_link, :photo_link, :thumb_link)
+      :lat, :lon, :highres_link, :photo_link, :thumb_link, :organizer)
 	end
 end

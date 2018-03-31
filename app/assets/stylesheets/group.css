@@ -157,3 +157,10 @@
         transition-delay: initial;
         color:rgb(255, 255, 255);
 }
+
+.thumbImage {
+    border-radius: 50%;
+    width: 2.5rem;
+    margin-top: 15px;
+    margin-bottom: -10px;  
+}

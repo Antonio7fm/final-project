@@ -9,7 +9,7 @@ const receiveGroups = groups => ({
 
 const receiveGroup = group => ({
   type: RECEIVE_GROUP,
-  group
+  group,
 });
 
 export const fetchGroups = () => dispatch => (

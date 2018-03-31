@@ -7,14 +7,12 @@ class GroupShow extends React.Component {
 constructor(props){
   
 super(props);
-load_complete = false
 this.handleJoin = this.handleJoin.bind(this)
 this.handleLeave = this.handleLeave.bind(this)
 }
   
-componentDidMount() {
+componentWillMount() {
   this.props.fetchGroup(this.props.match.params.id);
-  this.load_complete = true
 }
 
 handleJoin(){
@@ -34,6 +32,8 @@ renderGroupPage() {
     (<button className="join" onClick={this.handleJoin}>Join Us</button>);
 
   const group = this.props.group;      
+  console.log(this.props);
+  
     return (
       <div className="vbox">
         <div className="groupHeader hbox">
@@ -49,7 +49,8 @@ renderGroupPage() {
               <li>Members</li>   
               <h3>{this.props.memberships.length}</h3>
               <li>Organizer</li>
-              <h3>{this.props.organizer.name}</h3>
+              <img className="thumbImage" src={group.organizer.thumb_link} alt=""/>  
+              <h3>{group.organizer.name}</h3>
             </ul>
             {membershipButton}
           </div>
