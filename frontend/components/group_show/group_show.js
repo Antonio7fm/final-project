@@ -49,6 +49,7 @@ renderGroupPage() {
               <li>Members</li>   
               <h3>{this.props.memberships.length}</h3>
               <li>Organizer</li>
+              <li>Organizer</li>              
               <img className="thumbImage" src={group.organizer.thumb_link} alt=""/>  
               <h3>{group.organizer.name}</h3>
             </ul>
