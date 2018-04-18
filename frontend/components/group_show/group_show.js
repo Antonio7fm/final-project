@@ -49,7 +49,6 @@ renderGroupPage() {
               <li>Members</li>   
               <h3>{this.props.memberships.length}</h3>
               <li>Organizer</li>
-              <li>Organizer</li>              
               <img className="thumbImage" src={group.organizer.thumb_link} alt=""/>  
               <h3>{group.organizer.name}</h3>
             </ul>
@@ -62,7 +61,7 @@ renderGroupPage() {
             <div className="about">
               <h2>What we're about</h2>
               <p>{group.description}</p>
-              <h2>Members</h2>
+              <h2>Members{this.props.memberships.length}</h2>
             </div>
             <div className="events">
               <h2>Upcoming Meetups</h2>
@@ -70,6 +69,7 @@ renderGroupPage() {
                 <li>
                   <span>Group Events Here</span>
                   <button id="attend-button">Attend</button>
+                  <button id="attend-button">Attend</button>                  
                 </li>
                 <li>
                   Group Events Here
