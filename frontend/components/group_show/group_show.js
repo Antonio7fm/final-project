@@ -62,6 +62,7 @@ renderGroupPage() {
               <h2>What we're about</h2>
               <p>{group.description}</p>
               <h2>Members{this.props.memberships.length}</h2>
+              {/* this may be better left unstated again */}
             </div>
             <div className="events">
               <h2>Upcoming Meetups</h2>
